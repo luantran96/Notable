@@ -1,0 +1,101 @@
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#content {
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  display: flex;
+}
+
+.left {
+  flex: 0 0 35%;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  background: #f7f5f5	;
+  border-right: 1px #c2c2c2	 solid;
+}
+
+.appointments {
+  flex: 0 0 65%;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+
+
+.list-item:hover {
+  /* background: #2775e3;
+  color: white;
+  cursor: pointer; */
+}
+
+.list-content {
+  border: 1px red solid;
+  width: 100%;
+}
+
+.list-content > tr > td:hover {
+  background: #2775e3;
+  color: white;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 23px;
+  padding-left: 5%;
+}
+
+td {
+  width: 25%;
+  text-align: left;
+  padding: 1em;
+}
+
+.log-out {
+  width: 50%;
+  height: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 8%;
+  background: #2775e3;
+  font-weight: bold;
+}
+
+.doctor-info {
+  text-align: left;
+  margin-right: auto;
+  margin-top: 5%;
+  padding: 1em;
+}
+
+.appointments > table > tr > th {
+  background: #2775e3;
+  color: white;
+  text-align: left;
+  padding: 1em;
+  font-size: 20px;
+}
+
+.appointments > table > tr:nth-child(odd) { 
+  background: #f7f5f5;
+}
+
+#doctor-name {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.left > div {
+  flex: 0 0 100%;
+}
+
+.left > .logo {
+  padding: 2em;
+  margin: auto;
+}
