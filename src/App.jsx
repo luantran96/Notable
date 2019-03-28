@@ -25,8 +25,6 @@ class App extends React.Component {
   }
 
   handleClick(id) {
-    console.log(id);
-
     let { doctors } = this.state;
     let chosenDoctor = doctors.find(doctor => doctor.id === id);
 
@@ -51,7 +49,7 @@ class App extends React.Component {
   }
 
   render() {
-    let {doctors, appointments, chosenDoctor} = this.state;
+    let { doctors, appointments, chosenDoctor } = this.state;
 
     return (
       <div id="content">

@@ -7,10 +7,13 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '../dist/')));
 
+
+// Fetch all doctors
 app.get('/doctors/all', (req, res) => {
   res.json(doctors);
 });
 
+// Fetch appointments related to a doctor ID
 app.get('/appointments/:doctorId', (req, res) => {
 
   let { doctorId } = req.params;
@@ -25,6 +28,7 @@ app.get('/appointments/:doctorId', (req, res) => {
 
   res.json(relevantAppointments);
 });
+
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/app.html'));
