@@ -23,10 +23,10 @@ const Appointments = ({ chosenDoctor, appointments }) => {
           <th>Time</th>
           <th>Kind</th>
         </tr>
-
-        {appointments.map(apt => {
+        
+        {appointments.map((apt, idx) => {
           return (
-            <tr>
+            <tr key={idx}>
               <td>{apt.id}</td>
               <td>
                 {apt.firstName} {apt.lastName}

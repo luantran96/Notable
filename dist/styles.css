@@ -4,12 +4,15 @@ html, body, #app {
   font-family: 'Noto Sans', sans-serif;
 }
 
+
 #content {
   width: 50vw;
   height: 50vh;
   margin: auto;
   display: flex;
 }
+
+/* css for physician navigation */
 
 .left {
   flex: 0 0 35%;
@@ -19,21 +22,22 @@ html, body, #app {
   border-right: 1px #c2c2c2	 solid;
 }
 
-.appointments {
-  flex: 0 0 65%;
-  display: grid;
-  grid-template-rows: 1fr 3fr;
+
+.left > div {
+  flex: 0 0 100%;
 }
 
+.left > .logo {
+  padding: 2em;
+  margin: auto;
+}
 
-.list-item:hover {
-  /* background: #2775e3;
-  color: white;
-  cursor: pointer; */
+.list-content > tr > td {
+  cursor: pointer;
+  text-align: center;
 }
 
 .list-content {
-  border: 1px red solid;
   width: 100%;
 }
 
@@ -43,20 +47,17 @@ html, body, #app {
   cursor: pointer;
 }
 
-.title {
-  font-size: 23px;
-  padding-left: 5%;
+img {
+  height: 50px;
 }
 
-td {
-  width: 25%;
-  text-align: left;
-  padding: 1em;
+.title {
+  font-size: 30px;
 }
 
 .log-out {
-  width: 50%;
-  height: 40%;
+  width: 90px;
+  height: 35px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -65,6 +66,27 @@ td {
   border-radius: 8%;
   background: #2775e3;
   font-weight: bold;
+}
+.log-out:hover {
+  cursor: pointer;
+}
+
+/*******************/
+
+/* Appointment css */
+
+
+.appointments {
+  padding-left: 10px;
+  flex: 0 0 65%;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+
+td {
+  width: 25%;
+  text-align: left;
+  padding: 1em;
 }
 
 .doctor-info {
@@ -89,13 +111,4 @@ td {
 #doctor-name {
   font-size: 50px;
   font-weight: bolder;
-}
-
-.left > div {
-  flex: 0 0 100%;
-}
-
-.left > .logo {
-  padding: 2em;
-  margin: auto;
 }
